@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Leadership Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
@@ -15,26 +16,42 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     </head>
     <body>
-        <div class="page_height">
     <!-- -------------------------------- Nav Bar (HEADER) ---------------------------------------- -->
-            <header id="header1">
-                <nav> 
-                    <div class="logo">
-                        <a href="index.html" class="img_logo"><i class="fa-brands fa-gg-circle"></i><p>LEADERSHIP EVENT</p></a>
+            <header class="site-header">
+                <div class="page-width">
+                    <div class="flex-container">
+                        <button class="navbar-toggler collapsed" type="button">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="index.html" class="img_logo">
+                                <i class="fa-brands fa-gg-circle"></i>
+                                <p>LEADERSHIP<br>EVENT</p>
+                            </a>
+                        </div>
+                        <div class="header-cta__wrapper hide-desktop">
+                            <a class="ticket_button cta_ticket" title="Buy Ticket" href="#">Buy Tickets</a>
+                        </div>
+                        <div class="header-right">
+                            <div class="flex-container">
+                                <nav class="tabs header-menu">
+                                    <ul>                     
+                                        <li><a href="#container">Home</a></li>
+                                        <li><a data-id="ourStory" href="#ourStory">About</a></li>
+                                        <li><a href="#block_speaker">Speakers</a></li>
+                                        <li><a href="#">Schedules</a></li>
+                                        <li><a href="3">Pricing</a></li>
+                                        <li><a href="#">Venue</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="header-cta__wrapper hide-mobile">
+                                    <a class="ticket_button cta_ticket" title="Buy Ticket" href="#">Buy Tickets</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tabs">
-                        <ul>                     
-                            <li><a href="#container">Home</a></li>
-                            <li><a data-id="ourStory" href="#ourStory">About</a></li>
-                            <li><a href="#block_speaker">Speakers</a></li>
-                            <li><a href="">Schedules</a></li>
-                            <li><a href="">Pricing</a></li>
-                            <li><a href="">Venue</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li ><a class="ticket_button" title="Buy Ticket" href="#">Buy Tickets</a></li>
-                        </ul>
-                    </div>
-                </nav>
+                </div>
             </header>
 
     <!-- ---------------------------- Container Box (Banner / Title) ----------------------------------- -->
@@ -43,7 +60,7 @@
                 <div class="container_block">
                     
                 </div>
-                <video autoplay muted loop id="myVideo">
+                <video autoplay muted loop id="myVideo"> 
                     <source src="./cover-clip.mp4" type="video/mp4">
                 </video>
                 <div class="container_all">
@@ -370,7 +387,6 @@
                     </div> 
                 </div>
             </div>
-        </div>
     <!-- -------------------------------- Register Section ------------------------------------------- -->
 
             <div class="register">
@@ -478,7 +494,7 @@
             </div>
 
     <!-- --------------------------------------- Venue Location -------------------------------------------------- -->
-        <div class="page_height">
+        
             <div class="venue_section">
                 <div class="venue_block">
                     <h2>Here you go <span>Venue</span></h2>
@@ -508,41 +524,41 @@
                     </div>
                 </div>
             </div>
-        </div>
+            
     <!-- --------------------------------- Form Section ----------------------------------- -->
 
-        <div class="form_section">
-            <div class="page_height">
-                <div class="form_container">
-                    <div class="form_title">
-                        <h2>Please Say Hi</h2>
-                    </div>
-                    <form action="" method="post">
-                        <div class="form_lineone">
-                            <div class="form_name">
-                                <input type="text" name="name" placeholder="Name">
-                            </div>
-                            <div class="form_email">
-                                <input type="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="form_subject">
-                                <input type="text" name="subject" placeholder="Subject">
-                            </div>
+            <div class="form_section">
+                <div class="page-width">
+                    <div class="form_container">
+                        <div class="form_title">
+                            <h2>Please Say Hi</h2>
                         </div>
-                        
-                        <div class="form_message">
-                            <textarea name="message" id="message" placeholder="Message" cols="10" rows="6"></textarea>
-                            <button href="" class="button" title="Submit Button">Submit</button>
-                        </div>
-                        <!-- <div class="submit_button"> -->
+                        <form action="" method="post">
+                            <div class="form_lineone">
+                                <div class="form_name">
+                                    <input type="text" name="name" placeholder="Name">
+                                </div>
+                                <div class="form_email">
+                                    <input type="email" name="email" placeholder="Email">
+                                </div>
+                                <div class="form_subject">
+                                    <input type="text" name="subject" placeholder="Subject">
+                                </div>
+                            </div>
                             
-                        </div>
-                    </form>
+                            <div class="form_message">
+                                <textarea name="message" id="message" placeholder="Message" cols="10" rows="6"></textarea>
+                                <button href="" class="button" title="Submit Button">Submit</button>
+                            </div>
+                            <!-- <div class="submit_button"> -->
+                                
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
     <!-- ------------------------------------ Footer ------------------------------------ -->
-        <div class="page_height">
+        <div class="page-width">
             <footer>
                 <div class="footer_section">
                     <div class="footer_block_one">
@@ -588,6 +604,19 @@
             $("html, body").animate({
                 scrollTop: posOurStory
             },200);
+        });
+        $('.navbar-toggler').on('click', function(){
+            if($(this).hasClass('collapsed')){
+                $(".header-menu").stop().slideDown();
+                $(this).stop().addClass('close');
+                $(this).stop().removeClass('collapsed');
+                
+            }
+            else{
+                $(".header-menu").stop().slideUp();
+                $(this).stop().addClass('collapsed');
+                $(this).stop().removeClass('close');
+            }
         });
     </script>
 </html>
