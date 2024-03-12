@@ -11,6 +11,7 @@ body {
     margin:0 auto;
     padding:0 12px;
 }
+
 @media (min-width: 576px) {
     .page-width {
         max-width: 540px;
@@ -280,17 +281,19 @@ nav{
     border: none;
     /* margin-bottom: 10px; */
     background-color: #273053;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .inside_box{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 20px;
     /* margin-left: 3px; */
     flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
-    justify-content: center;    
+    width: 100%;  
 }
 
 .contentbox1 {
@@ -322,11 +325,11 @@ nav{
 }
 
 .imgbox1{
-    height:241px;
+    height:100%;
     position: relative;
-    width:356px;
+    width:100%; 
+    object-fit: cover;
     display: block;
-    
 }
 
 .box_title{
@@ -365,6 +368,7 @@ nav{
 .boxcoll{
     padding: 11px;
     position: relative;
+    width: 33.33%;
 }
 
 .imgbox_container::after{
@@ -383,9 +387,9 @@ nav{
     position: relative;
 }
 
-.imgbox_container:hover {
+/* .imgbox_container:hover {
     background-color: #0dcaf0;
-}
+} */
 
 .imgbox_container:hover::after{
     background-color: rgba(0, 0, 0, 0.8);
@@ -410,6 +414,16 @@ nav{
     transition: all 0.4s cubic-bezier(0.12, 0, 0.39, 0) 0s;}
 /* ----------Body Part--------- */
 
+.body_story{
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    /* justify-content: center; */
+    align-items: center;
+}
+
 .storytitle{
     font-size: 46px;
 }
@@ -419,19 +433,24 @@ nav{
     text-decoration: underline;
 }
 
-.bodypart{
-    margin: 109px 100px 100px 100px;
-    margin-left: 126px;
-}
+/* .bodypart{
+   margin-right: 70px;
+   margin-left: 70px;
+   padding-left: 12px;
+   padding-right: 12px;
+} */
 
 .story{
     margin-bottom:25px;
     letter-spacing: 1px;
+    padding-left: 12px;
 }
 
 .storydetails{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 }
 /* -------Left side bodypart------- */
 .lefthead{
@@ -444,7 +463,8 @@ nav{
 
 .leftpart{
     width:50%;
-    padding-right:18px;
+    padding-left:12px;
+    padding-right:12px;
 }
 
 .details1{
@@ -462,6 +482,7 @@ nav{
     font-size:16px;
     font-weight:600;
     margin-right:16px;
+    text-decoration: none;
 }
 
 .schedule{
@@ -472,6 +493,7 @@ nav{
     border-radius: 20px;
     font-size: 16px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .meet_speakers:hover{
@@ -488,7 +510,9 @@ nav{
 /* -----Right Side Bodypart----- */
 .rightpart{
     width:50%;
-    margin-left:5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* margin-left:5px; */
 }
 
 .righthead{
@@ -551,18 +575,19 @@ nav{
 .block_speaker{
     background-color: #f0f8ff;
     margin-top: 50px;
-    padding: 50px;
+    padding: 120px 0;
 }
 
 .speaker_info{
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.speaker_list{
+/* .speaker_list{
     margin: 88px 58px 78px 112px;
-}
+} */
 
 .left_speaker{
     width: 50%;
@@ -570,13 +595,15 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 14px;
+    /* padding-left: 14px; */
+    padding:50px;
+    /* margin: 10px 0 10px 0; */
 }
 
 .speaker_title{
     font-size: 46px;
     padding-bottom: 22px;
-    margin-top: -10px;
+    /* margin-top: -10px; */
     letter-spacing: 1.3px;
 }
 
@@ -594,21 +621,23 @@ nav{
 
 /* ------------- right speaker---------------- */
 .right_speaker{
-    width:565px;
-    height: 360px;
+    width:50%;
+    /* height: 360px; */
     overflow: hidden;
     position: relative;
     display: block;
-    
 }
 
 .logan{
     width: 100%;
-    height:100%;
-    position: absolute;
-    display: flex;
+    height: auto;
+    /* position: absolute; */
+    display: block;
     object-fit: cover;
+}
 
+.speaker_info_block{
+    position: relative;
 }
 
 .tag1{
@@ -617,20 +646,25 @@ nav{
     padding: 6px 11px;
     color:#fff;
     top:3%;
-    left:83%;
+    right:10px;
     border-radius: 6px;
     font-size:12px;
 }
+
 .right_speaker .position-relative{
     position: relative;
     z-index: 2;
+}
+
+.insidename{
+    padding-right: 140px;
 }
 
 .right_speaker .name{
     position: absolute;
     /* border-left: 6px solid #0dcaf0; */
     width:92%;
-    top:77%;
+    bottom: 20px;
     left:4%;
     padding: 8px 12px;
     background-color: #fff;
@@ -679,8 +713,11 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 190px;
+    /* margin-left: 190px; */
     visibility: hidden;
+    position: absolute;
+    right: 10px;
+    top:10px;
 }
 
 .icon-social{
@@ -1568,7 +1605,7 @@ footer{
 }
 
 
-
+/* ------------------------------------------------- */
 /* ------------------- Responsive ------------------ */
 @media screen and (max-width: 1200px) {
     .ticket_button{
@@ -1577,6 +1614,7 @@ footer{
     .header-menu a{
         font-size: 14px;
     }
+
 }
 @media screen and (max-width: 991px) {
     .hide-desktop {
@@ -1628,6 +1666,74 @@ footer{
     .container_all .title h2 {
         font-size: 48px;
     }
+
+    .img_container .boxcoll{
+        width:50%;
+    }
+
+    .body_story{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .rightpart{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .leftpart{
+        width: 100%;
+    }
+
+    .story h1{
+        font-size: 36px;
+    }
+
+    .leftpart .lefthead{
+        font-size: 32px;
+    }
+
+    .rightpart h3{
+        font-size: 28px;
+    }
+
+    .meet_speakers{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .schedule{
+        font-size: 16px;
+        padding:8px 16px;
+    }
+
+    .bodypart {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .left_speaker{
+        width: 100%;
+    }
+
+    .right_speaker {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .img_container .boxcoll{
+        width: 100%;
+    }
+
+    .imgbox_container{
+        width: 100%;
+    }
+
+    .inside_box{
+        width:90%;
+        padding:0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1642,4 +1748,119 @@ footer{
         padding: 8px 18px;
         font-size: 14px;
     }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .box_title{
+        font-size: 28px;
+    }
+
+    .ticket_button{
+        font-size: 13px;
+    }
+
+    .inside_box {
+        width: 100%;
+        padding: 0;
+    }
+
+   .bodypart {
+       margin-left: 6px;
+       margin-right: 6px;
+    }
+
+    .story h1 {
+        font-size: 32px;
+    }
+
+    .leftpart .lefthead {
+        font-size: 28px;
+    }
+
+    .rightpart h3 {
+        font-size: 24px;
+    }
+
+    .meet_speakers {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .schedule {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .rightpart {
+        padding:0;
+    }
+
+    .leftpart {
+        padding: 0;
+    }
+
+    .story{
+        padding: 0;
+    }
+
+    .meet_speakers{
+        width: 122px;
+    }
+
+    .schedule{
+        width:155px;
+        margin-top:14px;
+    }
 }
+
+@media screen and (max-width: 374px) {
+    .location ul{
+        text-align: center;
+    }
+
+    .leftpart .button1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .avatarimg{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .avatarimg .textright{
+        margin-left:0;
+        margin-top: 12px;
+    }
+
+    .imgavatar{
+        width: 60px;
+        height: 60px;
+    }
+
+    .avatar1 {
+        margin-left: 52px;
+    }
+
+    .avatar2 {
+        margin-left: 103px;
+    }
+
+    .avatar3 {
+        margin-left: 155px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .ticket_button {
+        font-size: 12px;
+    }
+
+
+}
+
