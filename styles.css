@@ -290,7 +290,7 @@ nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px;
+    padding-bottom: 20px;
     /* margin-left: 3px; */
     flex-wrap: wrap;
     width: 100%;  
@@ -443,7 +443,7 @@ nav{
 .story{
     margin-bottom:25px;
     letter-spacing: 1px;
-    padding-left: 12px;
+    /* padding-left: 12px; */
 }
 
 .storydetails{
@@ -463,7 +463,7 @@ nav{
 
 .leftpart{
     width:50%;
-    padding-left:12px;
+    /* padding-left:12px; */
     padding-right:12px;
 }
 
@@ -510,8 +510,8 @@ nav{
 /* -----Right Side Bodypart----- */
 .rightpart{
     width:50%;
-    padding-left: 12px;
-    padding-right: 12px;
+    /* padding-left: 12px; */
+    /* padding-right: 12px; */
     /* margin-left:5px; */
 }
 
@@ -654,10 +654,12 @@ nav{
 .right_speaker .position-relative{
     position: relative;
     z-index: 2;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .insidename{
-    padding-right: 140px;
+    padding-right: 62px;
 }
 
 .right_speaker .name{
@@ -744,16 +746,19 @@ nav{
 /* --------other speakers----------------------- */
 .otherspeaker{
     margin-top: 25px;
-    margin-left: -40px;
+    width: 100%;
+    /* margin-left: -40px; */
 }
 .list_of_speakers{
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    justify-content: space-between;
 }
 .list_other_speaker {
-    width: 50%;
-    height: 180px;
+    width: calc(25% - 15px);
+    height: auto;
     overflow: hidden;
     position: relative;
     display: block;
@@ -761,19 +766,19 @@ nav{
 
 .speakersimg{
     width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
+    height: auto;
+    position: relative;
+    display: block;
     object-fit: cover;
 }
 
 .list_other_speaker .name {
     position: absolute;
     /* border-left: 6px solid #0dcaf0; */
-    width: 83%;
-    top: 50%;
-    left: 9%;
-    padding: 10px 15px;
+    width: 92%;
+    bottom: 20px;
+    left: 4%;
+    padding: 8px 12px;
     background-color: #fff;
     z-index: 2;
 }
@@ -781,6 +786,8 @@ nav{
 .list_other_speaker .position-relative {
     position: relative;
     z-index: 2;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .list_other_speaker .name:before {
@@ -788,11 +795,12 @@ nav{
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
     width: 4px;
+    height: 100%;
+    
     background-color: #0dcaf0;
     z-index: 1;
-    transition: all 1s linear;
+    transition: all 0.6s linear;
 }
 
 .list_other_speaker:hover .name:before {
@@ -811,17 +819,15 @@ nav{
 
 .list_other_speaker .name {
     display: flex;
+    transition: all 0.2s linear;
 }
 
 .list_other_speaker:hover .name {
-    background-color: #0dcaf0;
     color: #fff;
-    transition: all 0.2s linear;
 }
 
 .list_other_speaker:hover .speakername_position {
     color: #fff;
-    transition: all 0.2s linear;
 }
 
 .nameicon2 {
@@ -830,6 +836,9 @@ nav{
     align-items: center;
     /* margin-left: 18px; */
     visibility: hidden;
+    position: absolute;
+    top:10px;
+    right:0;
 }
 
 .icon-social2 {
@@ -858,9 +867,9 @@ nav{
     visibility: visible;
 }
 
-#idicon{
+/* #idicon{
     margin-left: 15px;
-}
+} */
 
 /* ------------------------ Schedule Section ------------------ */
 .schedule_section{
@@ -871,7 +880,7 @@ nav{
 }
 
 .schedule_div{
-    width:81%;
+    width:100%;
     /* border: 1px solid black; */
 }
 
@@ -894,13 +903,14 @@ nav{
 .day_box_block{
     display: flex;
     flex-direction: row;
-    gap:17px;
+    /* gap:17px; */
     margin-bottom:9px;
+    flex-wrap: wrap;
 }
 
 .day_insidebox{
     display: block;
-    width: 100%;
+    width: 25%;
 }
 
 .schedule_day{
@@ -950,9 +960,8 @@ nav{
 .info_block{
     display: flex;
     flex-direction: row;
-    gap: 23px;
-    margin-left: -2px;
-    margin-right: -20px;
+    flex-wrap: wrap;
+    /* gap: 23px; */
     padding-bottom: 46px;
     padding-top: 48px;
     border-bottom: 1px solid #dee2e6;
@@ -963,8 +972,9 @@ nav{
 }
 
 .info_img{
-    height: 238px;
-    width:493px;
+    height: auto;
+    width:33.33%;
+    padding-right: 24px;
     /* border: 1px solid darkblue; */
     display: block;
     /* border-radius: 10px; */
@@ -973,14 +983,14 @@ nav{
 }
 .info_img img{ 
     display: block;
-    height:100%;
+    height:auto;
     width:100%;
     object-fit: cover;
     border-radius: 20px;
 }
 
 .info_details{
-    width:92%;
+    width:66.67%;
 }
 
 .info_details .info1_head{
@@ -998,7 +1008,7 @@ nav{
 .trainee{
     display: flex;
     flex-direction: row;
-    gap:90px;
+    gap:60px;
     align-items: center;
     padding-top:28px;
 }
@@ -1018,7 +1028,7 @@ nav{
     /* align-items: center; */
     width: 190px;
     margin-left: -15px;
-    margin-right: -56px;
+    /* margin-right: -56px; */
 }
 
 .name_trainee span{
@@ -1040,8 +1050,7 @@ nav{
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 100%;
-    height:100%; */
+   width: 100%;
     padding-top: 115px;
     padding-bottom:136px;
     background-attachment: fixed;
@@ -1063,10 +1072,11 @@ nav{
 .register_section{
     width:100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 94px;
+    justify-content: space-between;
+    /* gap:90px; */
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -1074,11 +1084,11 @@ nav{
 }
 
 .register_section .left_register{
-    width:660px;
+    width:60%;
 }
 
 .register_section .right_register{
-    width: 360px;
+    width: 40%;
     display: flex;
     margin-top: 20px;
     margin-right: -16px;
@@ -1109,6 +1119,7 @@ nav{
     color:#000;
     font-weight: 800;
     border-radius: 30px;
+    text-decoration: none;
 }
 
 .button_register:hover{
@@ -1124,20 +1135,20 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 86%;
+    width: 100%;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top:117px;
+    padding-top: 117px;
     margin-bottom: 20px;
-    padding: 2px;
+    /* padding: 2px; */
 }
 
 .ticket_section h2{
     font-size: 48px;
     color:#000;
     padding-bottom: 54px;
-    padding-left: 18px;
+    /* padding-left: 18px; */
 }
 
 .ticket_section h2 span{
@@ -1148,12 +1159,15 @@ nav{
 .ticket_option{
     display: flex;
     flex-direction: row;
-    gap:25px;
-    margin-left: 15px;
+    /* gap:25px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin-left: 15px; */
 }
+
 .ticket_optionbox{
     /* border: 1px solid black; */
-    width: 356px;
+    width: calc(33.33% - 12px);
     border-radius: 20px;
     position: relative;
     overflow: hidden;
@@ -1167,10 +1181,12 @@ nav{
     /* border: 1px solid black; */
     background-color: #273053;
     color:#fff;
-    padding: 17px 4px 17px 40px;
+    /* padding: 17px 4px 17px 40px; */
+    padding:17px 40px;
+    justify-content: space-between;
     overflow: hidden;
     position: relative;
-    gap:76px;
+    /* gap:76px; */
 }
 
 .head_name h3{
@@ -1207,6 +1223,8 @@ nav{
     border-radius: 25px;
     padding: 12px 20px;
     font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;    
 }
 
 .other_details{
@@ -1224,11 +1242,6 @@ nav{
     padding-bottom: 44px;
 }
 
-#ticket_head_gold{
-    gap:145px;
-
-}
-
 /* --------------------------------- Venue Location ------------------ */
 .venue_section{
     /* border: 1px solid black; */
@@ -1241,7 +1254,7 @@ nav{
 
 .venue_block{
     /* border:1px solid black; */
-    width:84%;
+    width:100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1249,7 +1262,7 @@ nav{
 .venue_block h2{
     font-size: 48px;
     padding-bottom: 44px;
-    padding-left: 18px;
+    /* padding-left: 18px; */
 
 }
 
@@ -1261,13 +1274,23 @@ nav{
 .venue_block_flex{
     display: flex;
     flex-direction: row;
-    gap:47px;
-    /* width: 80%; */
+    flex-wrap: wrap;
+    /* gap:47px; */
+    width: 100%;
+    justify-content: space-between;
+}
+
+.venue_location{
+    width: calc(50% - 10px);
+    height: auto;
+    align-items: center;
+    display: block;
 }
 
 .venue_location iframe{
-    width:540px;
-    height: 372px;
+    width:100%;
+    display: block;
+    height: 377px;
     border-radius: 20px;
     box-shadow: 1px 4px 25px rgba(192, 189, 189, 0.45);
 }
@@ -1275,7 +1298,9 @@ nav{
 .venue_address{
     border-radius: 20px;
     background-color: #fff;
-    height:358px;
+    width: calc(50% - 10px);
+    /* height:auto; */
+    display: block;
     overflow: hidden;
     box-shadow: 1px 3px 40px rgba(129, 127, 127, 0.45);
 }
@@ -1298,6 +1323,7 @@ nav{
 .venue_contact_address p a{
     color:#717275;
     letter-spacing: -1px;
+    text-decoration: none;
 }
 
 .venue_contact_address p a:hover{
@@ -1349,6 +1375,7 @@ nav{
     font-size: 24px;
     font-weight: 800;
     letter-spacing: -1px;
+    text-decoration: none;
 }
 
 .address2 a:hover{
@@ -1371,7 +1398,8 @@ nav{
 .form_container{
     /* border: 1px solid black; */
     border-radius: 20px;
-    width:55%;
+    /* width:100%; */
+    max-width: 712px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -1398,20 +1426,34 @@ form .form_lineone{
     display:flex;
     /* flex-direction: row; */
     /* width: 100%; */
-    gap:20px;
+    /* gap:20px; */
     padding-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form_lineone .form_name, .form_email, .form_subject{
+    width:calc(33.33% - 12px);
 }
 
 form .form_lineone input{
     padding: 14px 12px;
     border: none;
     font-weight: lighter;
-    width:200px;
+    width:100%;
     font-size: 18px;
     color: #212529;
     background-color:#f0f8ff;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+form .form_lineone input:focus-visible {
+    outline-color: #86b7fe;
+}
+
+/* form .form_lineone input::placeholder {
+    color: #0d6efd;
+} */
 
 form .form_message textarea{
     width:100%;
@@ -1707,11 +1749,6 @@ footer{
         padding:8px 16px;
     }
 
-    .bodypart {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
     .left_speaker{
         width: 100%;
     }
@@ -1719,6 +1756,94 @@ footer{
     .right_speaker {
         width: 100%;
     }
+
+    .list_other_speaker{
+        width: calc(50% - 12px);  
+    }
+
+    .list_of_speakers {
+        gap: 24px;
+    }
+
+    .day_insidebox {
+        width: 50%;
+    }
+
+    .schedule_title {
+        font-size: 36px;
+    }
+
+    .schedule_day h3 {
+        font-size: 32px;
+    }
+
+    .info_img {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .info_details{
+        width:100%;
+        padding-top: 10px;
+    }
+
+    .register_section .left_register {
+        width: 100%;
+    }
+
+    .register_section .right_register {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .left_register h2 {
+        font-size: 36px;
+    }
+
+    .ticket_optionbox {
+        width: calc(50% - 12px);
+    }
+
+    .ticket_option{
+        gap: 24px;
+    }
+
+    .ticket_section h2 {
+        font-size: 36px;
+    }
+
+    .head_name h3 {
+        font-size: 28px;
+    }
+
+    .price h4 {
+        font-size: 20px;
+    }
+
+    .ticket_section{
+        padding-top: 80px;
+    }
+
+    .venue_block h2 {
+        font-size: 36px;
+    }
+
+    .venue_location {
+        width: 100%;
+    }
+
+    .venue_address{
+        width:100%;
+    }
+
+    .venue_address_title h3 {
+        font-size: 36px;
+    }
+
+    .venue_block_flex {
+        gap:20px;
+    }
+
 }
 
 @media screen and (max-width: 768px){
@@ -1731,8 +1856,33 @@ footer{
     }
 
     .inside_box{
-        width:90%;
+        width:100%;
         padding:0;
+    }
+
+    .boxcoll {
+        padding:0;
+        padding-bottom: 30px;
+    }
+
+    .list_other_speaker {
+        width: 100%;
+    }
+
+    .trainee {
+        gap: 16px;
+    }
+
+    .ticket_optionbox {
+        width: 100%;
+    }
+
+    .venue_contact_address .venue_exact_address {
+        font-size: 28px;
+    }
+
+    .venue_contact_address p {
+        font-size: 20px;
     }
 }
 
@@ -1812,6 +1962,46 @@ footer{
     .schedule{
         width:155px;
         margin-top:14px;
+    }
+
+    .imgname_trainee {
+        margin-left: 0;
+    }
+
+    .left_register h2 {
+        font-size: 32px;
+    }
+
+    .right_register .button_register {
+        font-size: 13px;
+    }
+
+    .ticket_section h2 {
+        font-size: 32px;
+    }
+
+    .head_name h3 {
+        font-size: 24px;
+    }
+
+    .price h4 {
+        font-size: 20px;
+    }
+
+    .other_details a {
+        font-size: 13px;
+    }
+
+    .venue_block h2 {
+        font-size: 32px;
+    }
+
+    .venue_address_title h3 {
+        font-size: 32px;
+    }
+
+    .venue_contact_address .venue_exact_address {
+        font-size: 24px;
     }
 }
 
