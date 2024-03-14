@@ -104,6 +104,9 @@ nav{
     color:#0dcaf0;
     transition-duration: 0.5s;
 }
+#nav li.current a{
+    color: #0dcaf0;
+}
 
 .header-menu ul{
     display: flex;
@@ -294,6 +297,7 @@ nav{
     /* margin-left: 3px; */
     flex-wrap: wrap;
     width: 100%;  
+    justify-content: space-between;
 }
 
 .contentbox1 {
@@ -366,9 +370,9 @@ nav{
 
 
 .boxcoll{
-    padding: 11px;
+    /* padding: 11px; */
     position: relative;
-    width: 33.33%;
+    width: calc(33.33% - 12px);
 }
 
 .imgbox_container::after{
@@ -891,7 +895,7 @@ nav{
 
 .schedule_title{
     font-size: 48px;
-    padding: 106px 0 48px 15px;;
+    padding: 80px 0 48px 15px;;
 }
 
 .schedule_div .spantitle2{
@@ -929,9 +933,14 @@ nav{
     border-left:none;
 }
 
+.day_insidebox a{
+    text-decoration: none;
+}
+
 .schedule_day h3{
     font-size:36px;
     letter-spacing: -1px;
+    color:#000;
 }
 
 .schedule_day p{
@@ -948,10 +957,15 @@ nav{
     background-color: #fff;
     border-left: 3px solid #0dcaf0;
     box-shadow: 2px 10px 50px rgba(0, 0, 0, 0.175);
-
 }
 
-.day_insidebox:hover .schedule_day h3{
+.day_insidebox.active .schedule_day {
+    background-color: #fff;
+    border-left: 3px solid #0dcaf0;
+    box-shadow: 2px 10px 50px rgba(0, 0, 0, 0.175);
+}
+
+.day_insidebox:hover, .day_insidebox.active .schedule_day h3{
     color:#0dcaf0;
 }
 
@@ -1051,8 +1065,8 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
    width: 100%;
-    padding-top: 115px;
-    padding-bottom:136px;
+    padding-top: 100px;
+    padding-bottom:100px;
     background-attachment: fixed;
     position: relative;    
 }
@@ -1247,8 +1261,8 @@ nav{
     /* border: 1px solid black; */
     margin-top:100px;
     width: 100%;
-    padding-top:138px;
-    padding-bottom: 122px;
+    padding-top:94px;
+    padding-bottom: 110px;
     background-color: #f0f8ff;
 }
 
@@ -1432,7 +1446,7 @@ form .form_lineone{
     justify-content: space-between;
 }
 
-.form_lineone .form_name, .form_email, .form_subject{
+ .form_lineone_top{
     width:calc(33.33% - 12px);
 }
 
@@ -1447,12 +1461,14 @@ form .form_lineone input{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form .form_lineone input:focus-visible {
-    outline-color: #86b7fe;
+form .form_lineone input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+    border-radius: 6px;
 }
 
 /* form .form_lineone input::placeholder {
-    color: #0d6efd;
+    font-size: 17px;
 } */
 
 form .form_message textarea{
@@ -1464,6 +1480,12 @@ form .form_message textarea{
     color: #212529;
     margin-bottom:16px;  
     font-family: Arial, Helvetica, sans-serif;
+}
+
+form .form_message textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+    border-radius: 6px;
 }
 
 .form_message{
@@ -1508,13 +1530,14 @@ footer{
     margin-left: auto;
     margin-right: auto;
     /* padding-top: 120px; */
-    width:82%;
+    width:100%;
     /* padding-bottom: 120px; */
 }
 
 .footer_block_one{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     padding-bottom: 54px;
@@ -1524,6 +1547,7 @@ footer{
 .title_footer{
     display: flex;
     align-items: center;
+    width: 50%;
     gap: 10px;
 }
 
@@ -1541,7 +1565,10 @@ footer{
 .social_media{
     display: flex;
     gap: 12px;
-    margin-right: -8px;
+    width: 50%;
+    justify-content: end;
+    flex-wrap: wrap;
+    /* margin-right: -8px; */
 }
 
 .social_media a{
@@ -1566,12 +1593,14 @@ footer{
     align-items: center;
     justify-content: space-between;
     font-size: 16px;
+    flex-wrap: wrap;
 }
 
 .footer_block_two .div_one{
     display:flex;
     gap:21px;
-    width:44%;
+    width:50%;
+    flex-wrap: wrap;
 }
 
 .footer_block_two a:hover{
@@ -1579,37 +1608,37 @@ footer{
 }
 .footer_block_two a{
     color: #717275;
+    text-decoration: none;
 }
 
 .footer_block_two .div_two{
     color:#717275;
+    display: flex;
+    gap: 33px;
+    width: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .footer_block_two .div_two .design{
     padding-top: 30px;
 }
 
-.div_two{
-    display: flex;
-    gap:33px;
-    align-items: center;
-    justify-content: center;
-}
 
 .div_two .downarrow a{
     color:#000;
     background-color: #f0f8ff;
 }
-
-.div_two .downarrow{
-    padding-top: 40px;
-}   
+  
 
 .div_two .downarrow a:hover{
     color:#fff;
     background-color: #0dcaf0;
     transition: all 0.1s linear;
 }
+
+/* ==-------------------------------------------=== */
 .navbar-toggler{
     cursor: pointer;
     width:30px;
@@ -1714,8 +1743,8 @@ footer{
     }
 
     .body_story{
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 70px;
+        padding-bottom: 36px;
     }
 
     .rightpart{
@@ -1729,6 +1758,11 @@ footer{
 
     .story h1{
         font-size: 36px;
+    }
+
+    .block_speaker {
+        padding-top: 10px;
+        padding-bottom: 70px;
     }
 
     .leftpart .lefthead{
@@ -1769,8 +1803,13 @@ footer{
         width: 50%;
     }
 
+    .schedule_section{
+        padding-bottom: 24px;
+    }
+
     .schedule_title {
         font-size: 36px;
+        padding-top: 60px;
     }
 
     .schedule_day h3 {
@@ -1821,7 +1860,7 @@ footer{
     }
 
     .ticket_section{
-        padding-top: 80px;
+        padding-top: 68px;
     }
 
     .venue_block h2 {
@@ -1844,6 +1883,47 @@ footer{
         gap:20px;
     }
 
+    .form_section{
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    .form_title h2 {
+        font-size: 36px;
+    }
+
+    .footer_block_two .div_one {
+        width: 100%;
+    }
+
+    .footer_block_two .div_two {
+        width: 100%;
+        gap:0;
+        justify-content: start;
+    }
+
+    .footer_block_two{
+        padding-top: 50px;
+        gap:24px;
+    }
+
+    .div_two .downarrow {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .venue_section{
+        margin-top: 78px;
+        padding-top: 58px;
+        padding-bottom: 74px;
+    }
+
+    footer{
+        padding-top:74px;
+        padding-bottom: 74px;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -1883,6 +1963,31 @@ footer{
 
     .venue_contact_address p {
         font-size: 20px;
+    }
+
+    form .form_lineone {
+        gap:22px;
+        padding-bottom: 22px;
+    }
+
+    .form_lineone_top{
+        width: 100%;
+    }
+
+    form .form_lineone input {
+        font-size: 16px;
+    }
+
+    form .form_message textarea {
+        font-size: 16px;
+    }
+
+    .div_two .paragraph{
+        width: 80%;
+    }
+
+    .div_two .downarrow{
+        width: 20%;
     }
 }
 
@@ -2002,6 +2107,25 @@ footer{
 
     .venue_contact_address .venue_exact_address {
         font-size: 24px;
+    }
+
+    .form_title h2 {
+        font-size: 32px;
+    }
+
+    .footer_block_one{
+        align-items: start;
+    }
+
+    .footer_block_one .social_media{
+        gap:0;
+        justify-content: start;
+        margin-top: -10px;
+        width: 40%;
+    }
+
+    .footer_block_two .div_one {
+        justify-content: center;
     }
 }
 
